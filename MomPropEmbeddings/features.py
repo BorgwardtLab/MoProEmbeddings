@@ -2,7 +2,7 @@
 # @Author: Anja Gumpinger
 # @Date:     2020-02-17 15:47:04
 # @Last Modified by:   Anja Gumpinger
-# @Last Modified time: 2020-02-17 16:03:35
+# @Last Modified time: 2020-02-17 16:20:38
 
 import ipdb
 import logging
@@ -11,6 +11,7 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from scipy.stats import skew, kurtosis
 import seaborn as sns
 
 cmap = sns.color_palette()
@@ -151,15 +152,18 @@ def weighted_attr_kx(graph, attr, stat='max', k=2, weight='none',
     if k == 1:
         if weight == 'depth':
             return graph, False
-        graph.vs[out_attr] = [
-            stat_dict[stat](x) for x in graph.vs[value_attr]
-        ]
+        neighbor_values = [get_weight_k1_attribute(graph, v, attr, weight) 
+            for v in graph.vs
+        ]     
     elif k > 1:
-        graph.vs[out_attr] = [
-            stat_dict[stat](x) for x in graph.vs[value_attr]
+        neighbor_values = [
+            get_weight_kx_attribute(graph, v, attr, weight_dict, weight, k)
+            for v in graph.vs
         ]
     else:
         raise ValueError
+
+    graph.vs[out_attr] = [stat_dict[stat](x) for x in neighbor_values]
 
     return graph, True
 
