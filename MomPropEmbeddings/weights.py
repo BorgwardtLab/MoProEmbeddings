@@ -2,7 +2,7 @@
 # @Author: Anja Gumpinger
 # @Date:     2020-02-17 10:35:06
 # @Last Modified by:   Anja Gumpinger
-# @Last Modified time: 2020-02-17 10:35:47
+# @Last Modified time: 2020-02-17 14:10:54
 
 import ipdb
 import logging
@@ -26,7 +26,6 @@ def doremi_weights_k1(graph):
     doremi_weights = []
 
     for vertex in graph.vs:
-        print(f'vertex: {vertex.index}', end='\r')
         vertex_doremi_weights = []
         for x, neighbor in enumerate(vertex['k1_neighbors']):
             denom = 1 + sum(graph.vs[neighbor]['k1_stdWeights'])
