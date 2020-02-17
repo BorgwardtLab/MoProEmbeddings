@@ -2,7 +2,7 @@
 # @Author: Anja Gumpinger
 # @Date:     2020-02-17 15:47:04
 # @Last Modified by:   Anja Gumpinger
-# @Last Modified time: 2020-02-17 16:20:38
+# @Last Modified time: 2020-02-17 17:08:26
 
 import ipdb
 import logging
@@ -16,6 +16,23 @@ import seaborn as sns
 
 cmap = sns.color_palette()
 logging.basicConfig(level='INFO', format='.. %(message)s')
+
+
+def log_transform(graph, attr):
+    """Creates a log-transformed version of the attribute.
+
+    Args:
+        graph: igraph object.
+        attr: attribute that should be -log10 transformed.
+        overwrite: bool, whether or not to overwrite the existing value.
+
+    Returns:
+        graph: updated graph.
+        bool: indicator of whether the attribute did exist from the start.
+    """
+    new_attr = f'log_{attr}'
+    graph.vs[new_attr] = [-np.log10(v[f'{attr}']) for v in graph.vs]
+    return graph
 
 
 def weight_transform(p, w):

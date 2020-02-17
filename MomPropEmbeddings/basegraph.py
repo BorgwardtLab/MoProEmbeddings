@@ -2,7 +2,7 @@
 # @Author: Anja Gumpinger
 # @Date:     2020-02-17 10:26:08
 # @Last Modified by:   Anja Gumpinger
-# @Last Modified time: 2020-02-17 14:04:09
+# @Last Modified time: 2020-02-17 16:28:51
 
 from collections import defaultdict
 import ipdb
@@ -124,8 +124,7 @@ def make_vertice_map_from_edge_arr(edge_arr):
 
 
 def main():
-
-        pass
+    pass
 
 if __name__ == '__main__':
         main()
