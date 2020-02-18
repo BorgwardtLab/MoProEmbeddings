@@ -113,10 +113,8 @@ class MomProp(BaseData):
         self.__data_dict = self.extract_pickle()
 
         # Init the phenotypes and sample names.
-        self.y = np.asarray(self.__data_dict['is_cosmic'])
+        self.y = np.asarray(self.__data_dict['class_label'])
         self.samples = np.asarray(self.__data_dict['name'])
-
-        ipdb.set_trace()
 
         F = self.create_feature_lst(moments, edge_weight, n_hops)
         X = self.query_features_from_graph(F)

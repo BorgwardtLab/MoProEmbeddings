@@ -19,10 +19,17 @@ logging.basicConfig(level='INFO', format='.. %(message)s')
 
 
 def write_pickle(obj, filename):
-    """Loads a pickled file. """
-    with open(filename, 'wb') as fin:
-        pickle.dump(obj, fin)
+    """Writes an object with pickle. """
+    with open(filename, 'wb') as fout:
+        pickle.dump(obj, fout)
     pass
+
+
+def load_pickle(filename):
+    """Loads a pickled file. """
+    with open(filename, 'rb') as fin:
+        data = pickle.load(fin)
+    return data 
 
 
 def main():

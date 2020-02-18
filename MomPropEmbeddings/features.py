@@ -72,7 +72,7 @@ def get_weight_k1_attribute(graph, vertex, attr, weight='none'):
     if 'log' in attr:
         return [w*s for w, s in zip(weights, attr_lst)]
     else:
-        return [utils.weight_transform(p, w) for p, w in \
+        return [weight_transform(p, w) for p, w in \
             zip(attr_lst, weights)]
 
 
@@ -125,7 +125,7 @@ def get_weight_kx_attribute(graph, vertex, attr, weight_dict=None,
     if 'log' in attr:
         return [w*s for w, s in zip(weights, attr_lst)]
     else:
-        return [utils.weight_transform(p, w) for p, w in \
+        return [weight_transform(p, w) for p, w in \
                 zip(attr_lst, weights)]
 
 
