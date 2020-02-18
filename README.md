@@ -5,7 +5,7 @@ _Prediction of cancer driver genes through network-based moment propagation of m
 (Anja C. Gumpinger, Kasper Lage, Heiko Horn and Karsten Borgwardt), submitted to ISMB 2020.
 
 ## Requirements
-Execution of the python package requires the following dependencies to be installed.
+To execute the python package, the following modules are required.
 ```
 numpy
 scipy
