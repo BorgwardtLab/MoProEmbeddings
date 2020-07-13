@@ -15,7 +15,7 @@ import pandas as pd
 import scipy.sparse
 import seaborn as sns
 
-from MomPropEmbeddings import nw_methods
+from MoProEmbeddings import nw_methods
 
 cmap = sns.color_palette()
 logging.basicConfig(level='INFO', format='.. %(message)s')
@@ -86,7 +86,7 @@ class Adjacency():
         return adj_mat
 
 
-class MomProp(BaseData):
+class MoPro(BaseData):
     """Class to create the WL feature set. 
 
     Args:
