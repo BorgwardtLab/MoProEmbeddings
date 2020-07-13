@@ -28,3 +28,4 @@ The generation of moment propagation embeddings is a four-step process:
 
 ## Example.
 IPython notebooks that show how to execute the above steps can be found in `./examples`. First, the data has to be processed as shown in `./examples/preprocessing.ipynb`. Next, the MomProp embeddings can be computed, as explained in `mom_prop_embeddings.ipynb`.
+In case the notebooks are not propely displayed, we recommend https://nbviewer.jupyter.org/.
