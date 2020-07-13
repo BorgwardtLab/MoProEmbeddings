@@ -50,7 +50,7 @@ class TestBasegraph(unittest.TestCase):
                             k=k, weight='none', weight_dict=None
                         )
             # set random phenotype.
-            bg.vs['is_cosmic'] = [1, 0, 1, 0, 0, 0]
+            bg.vs['class_label'] = [1, 0, 1, 0, 0, 0]
             # save the pickle.
             utils.write_pickle(bg, self.basegraph_pkl)
 
