@@ -14,7 +14,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-from MomPropEmbeddings import basegraph, features, utils, data
+from MoProEmbeddings import basegraph, features, utils, data
 
 cmap = sns.color_palette()
 logging.basicConfig(level='INFO', format='.. %(message)s')
@@ -69,13 +69,13 @@ class TestBasegraph(unittest.TestCase):
         pass
 
 
-    def testMomPropDimensions(self):
+    def testMoProDimensions(self):
 
         n_hops = 2
         n_steps = 2
         moments = ['mean', 'std', 'skew', 'kurt']
 
-        mp_data = data.MomProp(
+        mp_data = data.MoPro(
             self.basegraph_pkl, 'pvalue', n_steps, n_hops=n_hops,
             moments=moments, edge_weight='none', path_weight='max'
         )

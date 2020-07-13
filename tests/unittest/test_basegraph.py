@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-from MomPropEmbeddings import basegraph, weights
+from MoProEmbeddings import basegraph, weights
 
 cmap = sns.color_palette()
 logging.basicConfig(level='INFO', format='.. %(message)s')
