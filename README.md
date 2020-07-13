@@ -1,8 +1,10 @@
-# MomPropEmbeddings
+# MoProEmbeddings
 
-Python implementation of the moment propagation (MomProp) embeddings described in 
+Python implementation of the moment propagation (MoPro) embeddings described in 
 _Prediction of cancer driver genes through network-based moment propagation of mutation scores_
-(Anja C. Gumpinger, Kasper Lage, Heiko Horn and Karsten Borgwardt), submitted to ISMB 2020.
+(Anja C. Gumpinger, Kasper Lage, Heiko Horn and Karsten Borgwardt). 
+See https://academic.oup.com/bioinformatics/article/doi/10.1093/bioinformatics/btaa581/5861532 
+for the publication.
 
 ## Requirements
 To execute the python package, the following modules are required.
